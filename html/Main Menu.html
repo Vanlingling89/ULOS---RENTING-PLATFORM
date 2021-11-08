@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ulos | Unified Lending Online Service</title>
     <link rel="stylesheet" href="..\css\style.css">
@@ -27,7 +26,7 @@
                     <img id="logoMain" alt="logo" src="..\img\logo.png" width="125px">
                 </div>
                 <nav>
-                    <ul>
+                    <ul id="MenuItems">
                         <li><a href="">Home</a></li>
                         <li><a href="">Product</a></li>
                         <li><a href="">About</a></li>
@@ -36,6 +35,7 @@
                     </ul>
                 </nav>
                 <img alt="cart" src="../img/cart.png" width="30px" height="30px">
+                <img alt="cart" src="../img/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
             <div class="row">
                 <div class="col-2">
@@ -238,10 +238,27 @@
                         <li><a href="https://www.facebook.com/JaymesOrden">Instagram</a></li>
                         <li><a href="https://www.facebook.com/JaymesOrden">OnlyFans</a></li>
                     </ul>
-                </div>              
+                </div>
             </div>
+            <hr>
+            <p c="copyright - ULOS ">Copyright 2020 </p>
         </div>
     </div>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") 
+            {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        };
+    </script>
 </body>
 
 </html>
