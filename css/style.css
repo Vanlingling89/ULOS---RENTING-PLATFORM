@@ -8,10 +8,6 @@ body{
 }
 /************ Navigation Bar ************/
 
-/* .logoMain{
-    padding-top: 20px;
-} */
-
 .navbar{
     display:flex;
     align-items: center;
@@ -30,16 +26,19 @@ nav ul li{
     display: inline-block;
     margin-right: 20px;
 }
+
+/************ Header ************/
+
 a{
     text-decoration: none;
-    color: #555
 }
 p{
     color: #555
 }
-
-/************ Header ************/
-
+#MenuItems a
+{
+    color: #555
+}
 .container{
     max-width: 1300px;
     margin: auto;
@@ -58,7 +57,7 @@ p{
 }
 .col-2 img{
     max-width: 100%;
-    padding: 50px 0; /*top,bottom and left,right*/ 
+    padding: 50px 50px; /*top,bottom and left,right*/ 
 }
 .col-2 h1{
     font-size: 50px;
@@ -67,21 +66,21 @@ p{
 }
 .btn{
     display: inline-block; /* inline-block allows to set a width and height on the element. */
-    background: #ff523b;
-    color: #fff;
+    background: rgb(46, 46, 88);
+    color: rgb(255, 255, 255);
     padding: 8px 30px;
     margin: 30px 0;
     border-radius: 30px;
     transition: background 0.5s; /*delay time when hovering the btn */
 }
 .header{
-    background: radial-gradient(#fff,#D7B4F3);
+    background: linear-gradient(rgb(255, 255, 255),#d0a0f8);
 }
 .header .row{
     margin-top: 70px;
 }
 .btn:hover {
-    background: #563434;
+    background: rgb(86, 86, 129);
 }
 
 /************ Categories ************/
@@ -172,13 +171,13 @@ small{
 .footer-col-1{
     flex-basis: 30%;
 }
+.footer-col-1 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
 .footer-col-2{
     flex: 1;
     text-align: center;
-}
-.footer-col-2 img{
-    width: 180px;
-    margin-bottom: 20px;
 }
 .footer-col-3, .footer-col-4{
     flex-basis: 12%;
@@ -195,7 +194,10 @@ ul{
     margin-left: 20px;
     display: none;
 }
-
+#download{
+    color:#8a8a8a;
+    size: 100%;
+}
 
 /* ------------------------------- ALL PRODUCTS PAGE ---------------------------- */
 
@@ -252,6 +254,10 @@ select:focus{
     }
     nav ul li a{
         color: #fff;
+    }
+    nav ul li a:hover{
+        color: rgb(23, 26, 223);
+        cursor: pointer;
     }
     .menu-icon{
         display: block;
