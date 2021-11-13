@@ -16,27 +16,26 @@
 </head>
 
 <body>
-    
-        <!--------------- navigation bar --------------->
 
-        <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <img id="logoMain" alt="logo" src="..\img\logo.png" width="125px">
-                </div>
-                <nav>
-                    <ul id="MenuItems">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Product</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Account</a></li>
-                    </ul>
-                </nav>
-                <img alt="cart" src="../img/cart.png" width="30px" height="30px">
-                <img alt="cart" src="../img/menu.png" class="menu-icon" onclick="menutoggle()">
+    <!--------------- navigation bar --------------->
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img id="logoMain" alt="logo" src="..\img\logo.png" width="125px">
             </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="Menu.html">Home</a></li>
+                    <li><a href="Browse.html">Browse</a></li>
+                    <li><a href="">Request</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <img alt="cart" src="../img/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
+
+
 
     <div class="small-container">
 
@@ -253,52 +252,44 @@
         </div>
     </div>
 
-     <!----------------- footer ---------------->
+    <!----------------- footer ---------------->
     <div class="footer">
         <div class="container">
             <div class="row">
                 <div class="footer-col-1">
-                    <h3>Download Our App</h3>
-                    <p>Download App for Android mobile phones</p>
-                </div>
-                <div class="footer-col-2">
                     <img src="../img/logo-white.png " alt="">
                     <p>Our goal is to provide a unified and easy-to-access platform for all types of renting needs.</p>
                 </div>
-                <div class="footer-col-3">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li>Coupons</li>
-                        <li>Blog Post</li>
-                        <li>Return Policy</li>
-                        <li>Join Affliliate</li>
-                    </ul>
+                <div class="footer-col-2">
+                    <h3>Download our App</h3>
+                    <p>Download App for Android mobile phones</p> <br>
+                    <a href="#"><i id="download" class="fas fa-download fa-2x"></i></a>
                 </div>
                 <div class="footer-col-3">
-                    <h3>Follow Us!</h3>
+                    <h3>Contact us</h3>
                     <ul>
-                        <li><a href="https://www.facebook.com/JaymesOrden">Facebook</a></li>
-                        <li><a href="https://www.facebook.com/JaymesOrden">Twitter</a></li>
-                        <li><a href="https://www.facebook.com/JaymesOrden">Instagram</a></li>
-                        <li><a href="https://www.facebook.com/JaymesOrden">OnlyFans</a></li>
+                        <li>Email address: help@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="">Return Policy</a></li>
+                        <li><a href="">Shop Policy</a></li>
                     </ul>
                 </div>
             </div>
             <hr>
-            <p c="copyright - ULOS ">Copyright 2020 </p>
+            <p c="copyright - ULOS ">Copyright 2021 </p>
         </div>
     </div>
-
-    <!-- ------------------------ js ----------------------- -->
-    
     <script>
         var MenuItems = document.getElementById("MenuItems");
 
         MenuItems.style.maxHeight = "0px";
 
         function menutoggle() {
-            if (MenuItems.style.maxHeight == "0px") 
-            {
+            if (MenuItems.style.maxHeight == "0px") {
                 MenuItems.style.maxHeight = "200px"
             }
             else {

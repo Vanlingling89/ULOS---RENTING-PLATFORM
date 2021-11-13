@@ -26,7 +26,15 @@ nav ul li{
     display: inline-block;
     margin-right: 20px;
 }
-
+#MenuItems li:hover{
+    background-color: rgb(149, 149, 197);
+    transform: translateY(-5px);
+}
+/* .try img{
+    position: absolute;
+    max-width: 5%;   
+    transform: translateY(30px); 
+} */
 /************ Header ************/
 
 a{
