@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/materialize.css" type="text/css">
+    <link rel="stylesheet" href="../css/style-login.css" type="text/css">
+    
+    <title>Document</title>
+
+</head>
+
+<!--<body class="deep-purple lighten-3">
+    <div class="container">
+    <form id="SignUpForm">
+        <div class="border card-panel ">
+        <h3 class="center-align">Sign Up Here!</h3>
+
+        <div class="row container">
+            <div class="input-field col s12">
+        <label for="username">Username</label>
+        <input class="validate" type="text" name="username" id="username" required>
+    </div>
+    <div class="input-field col s12">
+        <label for="email">Email</label>
+        <input class="validate" type="email" name="email" id="SignUpEmail" required>
+    </div>    
+    <div class="input-field col s12">
+        <label for="password">Password</label>
+        <input class="validate" type="password" name="password" id="SignUpPassword" required>
+    </div>
+        <div class="center-align">
+            <a href="/app/LoginForm.html">
+            <input class="btn deep-purple white-text wave-effect"id="submit"type="submit" value="Sign Up!">
+        </a>
+    </div>
+    </div> 
+</div>
+    </div>
+    </form> -->
+
+    <body class="grey lighten-3">
+
+        <!-- NAVBAR -->
+        <nav class="z-depth-0 grey lighten-4">
+          <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">
+              <img src="../img/babe.png" style="width: 100px; margin-top: 1px;">
+            </a>
+            <ul id="nav-mobile" class="right">
+                <li class="logged-in" style="display: none;">
+                  <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+                </li>
+                <li class="logged-in" style="display: none;">
+                  <a href="#" class="grey-text" id="logout">Logout</a>
+                </li>
+                <li class="logged-out" style="display: none;">
+                  <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+                </li>
+                <li class="logged-out" style="display: none;">
+                  <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+                </li>
+            </ul>
+          </div>
+        </nav>
+      
+        <!-- SIGN UP MODAL -->
+        <div id="modal-signup" class="modal">
+          <div class="modal-content">
+            <h4>Sign up</h4><br />
+            <form id="SignUpForm">
+              <div class="input-field">
+                <input type="email" id="SignUpEmail" required />
+                <label for="SignUpEmail">Email address</label>
+              </div>
+              <div class="input-field">
+                <input type="password" id="SignUpPassword" required />
+                <label for="SignUpPassword">Choose password</label>
+              </div>
+              <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+              <p class="error pink-text center-align"></p>
+            </form>
+          </div>
+        </div>
+      
+        <!-- LOGIN MODAL -->
+        <div id="modal-login" class="modal">
+          <div class="modal-content">
+            <h4>Login</h4><br />
+            <form id="LogInForm">
+              <div class="input-field">
+                <input type="email" id="LoginEmail" required />
+                <label for="LoginEmail">Email address</label>
+              </div>
+              <div class="input-field">
+                <input type="password" id="LoginPassword" required />
+                <label for="LoginPassword">Your password</label>
+              </div>
+              <button class="btn yellow darken-2 z-depth-0">Login</button>
+              <p class="error pink-text center-align"></p>
+
+            </form>
+          </div>
+        </div>
+      
+        <!-- ACCOUNT MODAL -->
+        <div id="modal-account" class="modal">
+          <div class="modal-content center-align">
+            <h4>Account details</h4><br />
+            <div class="account-details"></div>
+            <div class="account-extras"></div>
+          </div>
+        </div>
+
+
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    
+    <script defer src="../js/init-firebase.js"></script>
+    <script src="../js/index-login.js"></script>
+    <script src="../js/auth.js"></script>
+    
+<!-- <script>
+        //make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>-->
+    <script src="../js/materialize.min.js"></script>
+    <script src="../js/materialize.js"></script>  
+
+    
+
+    
+</body>

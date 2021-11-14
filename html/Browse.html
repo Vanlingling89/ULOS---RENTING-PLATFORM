@@ -1,39 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products - Ulos | Unified Lending Online Service</title>
-    <link rel="stylesheet" href="..\css\style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Zen+Antique&display=swap"
-        rel="stylesheet" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-</head>
-
-<body>
-
-    <!--------------- navigation bar --------------->
-
-    <div class="container">
-        <div class="navbar">
-            <div class="logo">
-                <img id="logoMain" alt="logo" src="..\img\logo.png" width="125px">
-            </div>
-            <nav>
-                <ul id="MenuItems">
-                    <li><a href="Menu.html">Home</a></li>
-                    <li><a href="Browse.html">Browse</a></li>
-                    <li><a href="">Request</a></li>
-                    <li><a href="">Account</a></li>
-                </ul>
-            </nav>
-            <img alt="cart" src="../img/menu.png" class="menu-icon" onclick="menutoggle()">
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ulos | Main Menu</title>
+        <link rel="stylesheet" href="..\css\style.css" type="text/css">
+        <link rel="stylesheet" href="../css/materialize.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&family=Zen+Antique&display=swap"
+            rel="stylesheet" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    </head>
+    
+    <body>
+        <div class="header">
+    
+            <!--------------- navigation bar --------------->
+    
+            <nav class="z-depth-0 grey lighten-4">
+                <div class="nav-wrapper container">
+                  <a href="#" class="brand-logo">
+                    <img src="../img/babe.png" style="width: 100px; margin-top: 1px;">
+                  </a>
+                  <ul id="nav-mobile" class="right">
+                      <li>
+                        <a href="Menu.html" class="grey-text">Home</a>
+                      </li>
+                      <li>
+                        <a href="Browse.html" class="grey-text">Browse</a>
+                      </li>
+                      <li>
+                        <a href="#" class="grey-text">Request</a>
+                      </li>
+                      <li class="logged-in" style="display: none;">
+                        <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+                      </li>
+                      <li class="logged-in" style="display: none;">
+                        <a href="#" class="grey-text" id="logout">Logout</a>
+                      </li>
+                      <li class="logged-out" style="display: none;">
+                        <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+                      </li>
+                      <li class="logged-out" style="display: none;">
+                        <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+            
+              <!-- SIGN UP MODAL -->
+              <div id="modal-signup" class="modal">
+                <div class="modal-content">
+                  <h4>Sign up</h4><br />
+                  <form id="SignUpForm">
+                    <div class="input-field">
+                      <input type="email" id="SignUpEmail" required />
+                      <label for="SignUpEmail">Email address</label>
+                    </div>
+                    <div class="input-field">
+                      <input type="password" id="SignUpPassword" required />
+                      <label for="SignUpPassword">Choose password</label>
+                    </div>
+                    <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+                    <p class="error pink-text center-align"></p>
+                  </form>
+                </div>
+              </div>
+            
+              <!-- LOGIN MODAL -->
+              <div id="modal-login" class="modal">
+                <div class="modal-content">
+                  <h4>Login</h4><br />
+                  <form id="LogInForm">
+                    <div class="input-field">
+                      <input type="email" id="LoginEmail" required />
+                      <label for="LoginEmail">Email address</label>
+                    </div>
+                    <div class="input-field">
+                      <input type="password" id="LoginPassword" required />
+                      <label for="LoginPassword">Your password</label>
+                    </div>
+                    <button class="btn yellow darken-2 z-depth-0">Login</button>
+                    <p class="error pink-text center-align"></p>
+      
+                  </form>
+                </div>
+              </div>
+            
+              <!-- ACCOUNT MODAL -->
+              <div id="modal-account" class="modal">
+                <div class="modal-content center-align">
+                  <h4>Account details</h4><br />
+                  <div class="account-details"></div>
+                  <div class="account-extras"></div>
+                </div>
+              </div>
+    
 
 
 
@@ -268,7 +334,7 @@
                 <div class="footer-col-3">
                     <h3>Contact us</h3>
                     <ul>
-                        <li>Email address: help@gmail.com</li>
+                       <li>Email address: help@gmail.com</li>
                     </ul>
                 </div>
                 <div class="footer-col-4">
@@ -283,6 +349,25 @@
             <p c="copyright - ULOS ">Copyright 2021 </p>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    
+    <script defer src="../js/init-firebase.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/index.js"></script>
+    
+<!-- <script>
+        //make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>-->
+    
+    <script src="../js/materialize.min.js"></script>
+    <script src="../js/materialize.js"></script> 
+
     <script>
         var MenuItems = document.getElementById("MenuItems");
 

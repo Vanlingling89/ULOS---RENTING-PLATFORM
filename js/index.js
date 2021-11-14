@@ -1,14 +1,21 @@
- var MenuItems = document.getElementById("MenuItems");
-
- MenuItems.style.maxHeight = "0px";
-
- function menutoggle(){
-     if( MenuItems.style.maxHeight == "0px")
-     {
-        MenuItems,style.maxHeight = "200px"
+ const loggedOUtLinks = document.querySelectorAll('.logged-out');
+ const loggedInLinks = document.querySelectorAll('.logged-in');
+ 
+ const setupUI = (user) => {
+     if (user) {
+         loggedInLinks.forEach(item => item.style.display = 'block');
+         loggedOUtLinks.forEach(item => item.style.display = 'none');
+     } else {
+         loggedInLinks.forEach(item => item.style.display = 'none');
+         loggedOUtLinks.forEach(item => item.style.display = 'block');
      }
-     else
-     {
-        MenuItems,style.maxHeight = "0px"
-     }
- };
+ }
+ 
+ 
+ // setup materialize components
+ document.addEventListener('DOMContentLoaded', function() {
+ 
+     var modals = document.querySelectorAll('.modal');
+     M.Modal.init(modals);
+ 
+ });
