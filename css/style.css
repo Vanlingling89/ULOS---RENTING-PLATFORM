@@ -66,6 +66,7 @@ p{
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding-bottom: 120px;
 }
 .col-2{
     flex-basis: 50%;
@@ -249,6 +250,38 @@ select:focus{
     background:white;
 }
 
+
+/* ----------------------------- Request Page ---------------------- */
+.col-req{
+    flex-basis: 40%;
+    padding: 20px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    margin: 30px;
+    transition: transform 0.2s;
+    border: 1px solid;
+    box-shadow: 5px 10px;
+}
+.col-req:hover{
+    transform: translateY(-8px); /* makes the products move up when hovering, very neat */
+}
+.request-subtext{
+    font-style: italic;
+    float: left;
+}
+.request-title{
+    font-weight:bolder;
+    font-size: 20px;
+    display: inline;
+    padding: 10px;
+    width: 33.33%;
+}
+.request-title::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /* ------------------ media query for menu ------------ */
 
 @media only screen and (max-width: 992px){
@@ -291,8 +324,3 @@ select:focus{
         flex-basis: 100%;
     }
 }
-
-
-
-
-

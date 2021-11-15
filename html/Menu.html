@@ -14,6 +14,8 @@
         rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
 </head>
 
 <body>
@@ -23,86 +25,87 @@
 
         <nav class="z-depth-0 grey lighten-4">
             <div class="nav-wrapper container">
-              <a href="#" class="brand-logo">
-                <img src="../img/babe.png" style="width: 100px; margin-top: 1px;">
-              </a>
-              <ul id="MenuItems" class="right"> <!--  id="nav-mobile"-->
-                  <li>
-                    <a href="Menu.html" class="grey-text">Home</a>
-                  </li>
-                  <li>
-                    <a href="Browse.html" class="grey-text">Browse</a>
-                  </li>
-                  <li>
-                    <a href="#" class="grey-text">Request</a>
-                  </li>
-                  <li class="logged-in" style="display: none;">
-                    <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
-                  </li>
-                  <li class="logged-in" style="display: none;">
-                    <a href="#" class="grey-text" id="logout">Logout</a>
-                  </li>
-                  <li class="logged-out" style="display: none;">
-                    <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
-                  </li>
-                  <li class="logged-out" style="display: none;">
-                    <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
-                  </li>
-              </ul>
-              <img alt="cart" src="../img/menu.png" class="menu-icon" onclick="menutoggle()">
+                <a href="#" class="brand-logo">
+                    <img src="../img/babe.png" style="width: 100px; margin-top: 1px;">
+                </a>
+                <ul id="MenuItems" class="right">
+                    <!--  id="nav-mobile"-->
+                    <li>
+                        <a href="Menu.html" class="grey-text">Home</a>
+                    </li>
+                    <li>
+                        <a href="Browse.html" class="grey-text">Browse</a>
+                    </li>
+                    <li>
+                        <a href="Request.html" class="grey-text">Request</a>
+                    </li>
+                    <li class="logged-in" style="display: none;">
+                        <a href="Account.html" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+                    </li>
+                    <li class="logged-in" style="display: none;">
+                        <a href="#" class="grey-text" id="logout">Logout</a>
+                    </li>
+                    <li class="logged-out" style="display: none;">
+                        <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+                    </li>
+                    <li class="logged-out" style="display: none;">
+                        <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+                    </li>
+                </ul>
+                <img alt="cart" src="../img/menu.png" class="menu-icon" onclick="menutoggle()">
             </div>
-           
-          </nav>
-         
-          
-        
-          <!-- SIGN UP MODAL -->
-          <div id="modal-signup" class="modal">
+
+        </nav>
+
+
+
+        <!-- SIGN UP MODAL -->
+        <div id="modal-signup" class="modal">
             <div class="modal-content">
-              <h4>Sign up</h4><br />
-              <form id="SignUpForm">
-                <div class="input-field">
-                  <input type="email" id="SignUpEmail" required />
-                  <label for="SignUpEmail">Email address</label>
-                </div>
-                <div class="input-field">
-                  <input type="password" id="SignUpPassword" required />
-                  <label for="SignUpPassword">Choose password</label>
-                </div>
-                <button class="btn yellow darken-2 z-depth-0">Sign up</button>
-                <p class="error pink-text center-align"></p>
-              </form>
+                <h4>Sign up</h4><br />
+                <form id="SignUpForm">
+                    <div class="input-field">
+                        <input type="email" id="SignUpEmail" required />
+                        <label for="SignUpEmail">Email address</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="SignUpPassword" required />
+                        <label for="SignUpPassword">Choose password</label>
+                    </div>
+                    <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+                    <p class="error pink-text center-align"></p>
+                </form>
             </div>
-          </div>
-        
-          <!-- LOGIN MODAL -->
-          <div id="modal-login" class="modal">
+        </div>
+
+        <!-- LOGIN MODAL -->
+        <div id="modal-login" class="modal">
             <div class="modal-content">
-              <h4>Login</h4><br />
-              <form id="LogInForm">
-                <div class="input-field">
-                  <input type="email" id="LoginEmail" required />
-                  <label for="LoginEmail">Email address</label>
-                </div>
-                <div class="input-field">
-                  <input type="password" id="LoginPassword" required />
-                  <label for="LoginPassword">Your password</label>
-                </div>
-                <button class="btn yellow darken-2 z-depth-0">Login</button>
-                <p class="error pink-text center-align"></p>
-  
-              </form>
+                <h4>Login</h4><br />
+                <form id="LogInForm">
+                    <div class="input-field">
+                        <input type="email" id="LoginEmail" required />
+                        <label for="LoginEmail">Email address</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="LoginPassword" required />
+                        <label for="LoginPassword">Your password</label>
+                    </div>
+                    <button class="btn yellow darken-2 z-depth-0">Login</button>
+                    <p class="error pink-text center-align"></p>
+
+                </form>
             </div>
-          </div>
-        
-          <!-- ACCOUNT MODAL -->
-          <div id="modal-account" class="modal">
+        </div>
+
+        <!-- ACCOUNT MODAL -->
+        <div id="modal-account" class="modal">
             <div class="modal-content center-align">
-              <h4>Account details</h4><br />
-              <div class="account-details"></div>
-              <div class="account-extras"></div>
+                <h4>Account details</h4><br />
+                <div class="account-details"></div>
+                <div class="account-extras"></div>
             </div>
-          </div>
+        </div>
 
         <!-- <div class="container">
             <div class="navbar">
@@ -122,21 +125,21 @@
 
         <!--------------- header --------------->
 
-            <div class="row">
-                <div class="col-2">
-                    <h1>Looking for something?</h1>
-                    <p>Renting, also known as hiring or letting, is an agreement where a payment is made for the
-                        temporary use of a good, service or property owned by another. </p>
-                </div>
-                <div class="col-2">
-                    <img src="..\img\sample tarsier.png" alt="">
-                </div>
-                <div>
-                    <a href="Browse.html" class="btn violet">Browse &#10148</a> 
-                    <a href="" class="btn violet">Request &#10148</a>
-                </div>
+        <div class="row">
+            <div class="col-2">
+                <h1>Looking for something?</h1>
+                <p>Renting, also known as hiring or letting, is an agreement where a payment is made for the
+                    temporary use of a good, service or property owned by another. </p>
+            </div>
+            <div class="col-2">
+                <img src="..\img\sample tarsier.png" alt="">
+            </div>
+            <div>
+                <a href="Browse.html" class="btn">Browse &#10148</a>
+                <a href="" class="btn">Request &#10148</a>
             </div>
         </div>
+    </div>
     </div>
 
     <!------------ feature catergories ------------->
@@ -286,7 +289,7 @@
                 <div class="footer-col-3">
                     <h3>Contact us</h3>
                     <ul>
-                       <li>Email address: help@gmail.com</li>
+                        <li>Email address: help@gmail.com</li>
                     </ul>
                 </div>
                 <div class="footer-col-4">
@@ -302,23 +305,23 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    
+
     <script defer src="../js/init-firebase.js"></script>
     <script src="../js/auth.js"></script>
     <script src="../js/index.js"></script>
-    
-<!-- <script>
+
+    <!-- <script>
         //make auth and firestore references
         const auth = firebase.auth();
         const db = firebase.firestore();
     </script>-->
-    
+
     <script src="../js/materialize.min.js"></script>
-    <script src="../js/materialize.js"></script> 
+    <script src="../js/materialize.js"></script>
 
     <script>
         var MenuItems = document.getElementById("MenuItems");

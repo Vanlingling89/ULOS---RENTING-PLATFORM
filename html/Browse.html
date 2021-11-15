@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ulos | Main Menu</title>
+        <title>Ulos | Browse </title>
         <link rel="stylesheet" href="..\css\style.css" type="text/css">
         <link rel="stylesheet" href="../css/materialize.css" type="text/css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +14,8 @@
             rel="stylesheet" crossorigin="anonymous">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
             integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
     </head>
     
     <body>
@@ -23,82 +25,87 @@
     
             <nav class="z-depth-0 grey lighten-4">
                 <div class="nav-wrapper container">
-                  <a href="#" class="brand-logo">
-                    <img src="../img/babe.png" style="width: 100px; margin-top: 1px;">
-                  </a>
-                  <ul id="nav-mobile" class="right">
-                      <li>
-                        <a href="Menu.html" class="grey-text">Home</a>
-                      </li>
-                      <li>
-                        <a href="Browse.html" class="grey-text">Browse</a>
-                      </li>
-                      <li>
-                        <a href="#" class="grey-text">Request</a>
-                      </li>
-                      <li class="logged-in" style="display: none;">
-                        <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
-                      </li>
-                      <li class="logged-in" style="display: none;">
-                        <a href="#" class="grey-text" id="logout">Logout</a>
-                      </li>
-                      <li class="logged-out" style="display: none;">
-                        <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
-                      </li>
-                      <li class="logged-out" style="display: none;">
-                        <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
-                      </li>
-                  </ul>
+                    <a href="#" class="brand-logo">
+                        <img src="../img/babe.png" style="width: 100px; margin-top: 1px;">
+                    </a>
+                    <ul id="MenuItems" class="right">
+                        <!--  id="nav-mobile"-->
+                        <li>
+                            <a href="Menu.html" class="grey-text">Home</a>
+                        </li>
+                        <li>
+                            <a href="Browse.html" class="grey-text">Browse</a>
+                        </li>
+                        <li>
+                            <a href="Request.html" class="grey-text">Request</a>
+                        </li>
+                        <li class="logged-in" style="display: none;">
+                            <a href="Account.html" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+                        </li>
+                        <li class="logged-in" style="display: none;">
+                            <a href="#" class="grey-text" id="logout">Logout</a>
+                        </li>
+                        <li class="logged-out" style="display: none;">
+                            <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+                        </li>
+                        <li class="logged-out" style="display: none;">
+                            <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+                        </li>
+                    </ul>
+                    <img alt="cart" src="../img/menu.png" class="menu-icon" onclick="menutoggle()">
                 </div>
-              </nav>
-            
-              <!-- SIGN UP MODAL -->
-              <div id="modal-signup" class="modal">
+    
+            </nav>
+    
+    
+    
+            <!-- SIGN UP MODAL -->
+            <div id="modal-signup" class="modal">
                 <div class="modal-content">
-                  <h4>Sign up</h4><br />
-                  <form id="SignUpForm">
-                    <div class="input-field">
-                      <input type="email" id="SignUpEmail" required />
-                      <label for="SignUpEmail">Email address</label>
-                    </div>
-                    <div class="input-field">
-                      <input type="password" id="SignUpPassword" required />
-                      <label for="SignUpPassword">Choose password</label>
-                    </div>
-                    <button class="btn yellow darken-2 z-depth-0">Sign up</button>
-                    <p class="error pink-text center-align"></p>
-                  </form>
+                    <h4>Sign up</h4><br />
+                    <form id="SignUpForm">
+                        <div class="input-field">
+                            <input type="email" id="SignUpEmail" required />
+                            <label for="SignUpEmail">Email address</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="SignUpPassword" required />
+                            <label for="SignUpPassword">Choose password</label>
+                        </div>
+                        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+                        <p class="error pink-text center-align"></p>
+                    </form>
                 </div>
-              </div>
-            
-              <!-- LOGIN MODAL -->
-              <div id="modal-login" class="modal">
+            </div>
+    
+            <!-- LOGIN MODAL -->
+            <div id="modal-login" class="modal">
                 <div class="modal-content">
-                  <h4>Login</h4><br />
-                  <form id="LogInForm">
-                    <div class="input-field">
-                      <input type="email" id="LoginEmail" required />
-                      <label for="LoginEmail">Email address</label>
-                    </div>
-                    <div class="input-field">
-                      <input type="password" id="LoginPassword" required />
-                      <label for="LoginPassword">Your password</label>
-                    </div>
-                    <button class="btn yellow darken-2 z-depth-0">Login</button>
-                    <p class="error pink-text center-align"></p>
-      
-                  </form>
+                    <h4>Login</h4><br />
+                    <form id="LogInForm">
+                        <div class="input-field">
+                            <input type="email" id="LoginEmail" required />
+                            <label for="LoginEmail">Email address</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="LoginPassword" required />
+                            <label for="LoginPassword">Your password</label>
+                        </div>
+                        <button class="btn yellow darken-2 z-depth-0">Login</button>
+                        <p class="error pink-text center-align"></p>
+    
+                    </form>
                 </div>
-              </div>
-            
-              <!-- ACCOUNT MODAL -->
-              <div id="modal-account" class="modal">
+            </div>
+    
+            <!-- ACCOUNT MODAL -->
+            <div id="modal-account" class="modal">
                 <div class="modal-content center-align">
-                  <h4>Account details</h4><br />
-                  <div class="account-details"></div>
-                  <div class="account-extras"></div>
+                    <h4>Account details</h4><br />
+                    <div class="account-details"></div>
+                    <div class="account-extras"></div>
                 </div>
-              </div>
+            </div>
     
 
 
